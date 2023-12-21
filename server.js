@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-app.post('/', (req, res) => {
+app.post('/post', (req, res) => {
   const { sum, orientation, payer, client } = req.body;
 
   if (!sum || !orientation || !payer || !client) {
